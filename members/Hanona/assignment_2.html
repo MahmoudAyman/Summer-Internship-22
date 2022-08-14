@@ -147,35 +147,32 @@ and it came out pretty nice and so effective...
  
   <style>
     * {
-      box-sizing: content-box;
-      }
-    .column 
-    {
-      float: right;
-      width:33.3333%;
-      padding:1px;
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
     }
     
     /* Clearfix (clear floats) */
-    .row::after 
-    {
+    .row::after {
       content: "";
       clear: both;
       display: table;
     }
     </style>
-  <body>
     <div class="row">
-      <div class="column">
-        <img src="images/part1designing.png" style="width:50%">
-      </div>
-      <div class="column">
-        <img src="images/drafting.jpg" style="width:30%">
-      </div>
-      <div class="column">
-        <img src="images/part2designing.png" style="width:70%; padding-left ">
-      </div>
-    </div>
+      
+        <img src="images/drafting.jpg"  style="width:30%">
+      
+        <img src="images/part1designing.png"  style="width:30%">
+
+        <img src="images/part2designing.png" style="width:30%">
+     
+</div>
+    
     </body>
     <h2 style= "color:rgb(147, 9, 189);"> --------------------------------------------------------------------------------------------------- </h2>
     <p> next i tried the joints to be assemble on Fusion 360</p>
