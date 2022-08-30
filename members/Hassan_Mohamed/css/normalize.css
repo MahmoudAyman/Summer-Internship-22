@@ -528,3 +528,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.assignmentImg{
+    width: 75%;
+    height: 5%;
+}
