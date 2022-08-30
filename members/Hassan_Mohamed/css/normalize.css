@@ -539,6 +539,11 @@ table {
     justify-content: center;
     width: 100%;
     flex-direction: column;
-
 }
 
+.fileButton{
+    padding: 1rem;
+}
+.fileLink{
+    text-decoration: none;
+}
