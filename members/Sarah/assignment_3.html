@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- CHANGE YOUR NAME -->
+    <title>Sarah Magdy || Summer Internship</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/flexslider/flexslider.css">
+    <link rel="stylesheet" href="css/colorblocks-style.css">
+    <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+
+        <div id="banner">
+            <div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="20%" width="20%"></a></div>
+        </div>
+
+        <nav id="topnav" role="navigation">
+            <div class="menu-toggle">Menu</div>
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="assignment_1.html">Assignments</a>
+                    <ul>
+                        <li><a href="assignment_1.html">Cake Receipe</a></li>
+                        <li><a href="assignment_2.html">Connect4</a></li>
+                        <li><a href="assignment_3.html">Electronics Lab</a></li>
+                        <!-- <li><a href="assignment_1.html">Assignment</a></li> -->
+                        <!-- <li><a href="assignment_1.html">Assignment</a></li> -->
+                        <!-- <li><a href="assignment_1.html">Assignment</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="final.html">Final Project</a></li>
+            </ul>
+        </nav>
+
+    </header><!-- end header -->
+
+    <section id="page-header" class="clearfix">
+
+        <div class="wrapper">
+            <h1>Assignment 3:Electronics Lab</h1>
+            <!-- <img src="images/image8.png " Style="width: 40%;"> -->
+            <h1></h1>
+
+        </div>
+    </section>
+
+    <div id="main" class="wrapper clearfix">
+
+        <section id="content">
+            <!-- ADD YOUR THE STEPS OF YOUR DOCUMENTATION BELOW -->
+            <!-- TO ADD IMAGES YOU WILL FIND IMG TAGS BETWEEN PARAGRAPHS -->
+            <!-- ADD THE NAME OF YOUR FILE -->
+
+            <h2> In this lab we will have 2 stages . </h2>
+            <ul>
+                <li>First: Interface with "Basic Electronic Compnents".</li> <br>
+                <li>Second: we will use "ICs".(555 IC & Counter IC) </li>
+
+            </ul>
+            <br>
+            <br>
+
+
+
+            <h2> Content Of The First Stage:</h2>
+            <nav id="secondary-navigation">
+                <ul>
+
+                    <li><a>Circuit 1: Implement a circuit using (Led, Potentiometer 10k, Battery 9v)</a></li>
+
+                    <li><a>Circuit 2: Implement a circuit using (Led, Resistor,Battery 9v, 2 Switches) </li> </a>
+
+                    <li><a>Circuit 3: Implement a circuit using (Led, Capacitor (10 microF), Battery 5v)</li> </a>
+
+                    <li><a>Circuit 4: Implement a circuit using (Led, Resistor, Potentiometer 10k, LDR, Battery 9V, NPN
+                            transistor
+                            2N2222) </li> </a>
+
+                    <li><a>Circuit 5: Implement a circuit using (Led, 3 Resistors, Push Button, Battery 9V, NPN
+                            transistor 2N2222)
+                    </li>
+                    </a>
+
+                    <li><a>Circuit 6: Implement a circuit using (2 Led, 2 Resistors 1k, 2 Resistors 10k,
+                            2 Capacitor(100microF) ,2 Battery 9V, 2 NPN transistor 2N2222) </li> </a>
+
+
+                </ul>
+            </nav>
+
+
+
+            <h1>circuit #1</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120335.png">
+
+            </ul>
+            <h2> Hardware connection:</h2>
+            <br>
+            <img src="images/unnamed.gif" alt="logo" width="70%">
+            <br>
+            <br>
+            <h2> How does this circuit work?</h2><br>
+            <ul>
+                <li>first we need to bring the data sheet in order to know how much voltage & current the led needs.
+                    It's in
+                    "2.1v" range && "20 mA" , so we conclude that if we connected the 9v supply directly to the led it
+                    will
+                    burn out , here comes the role of the Potentiometer and by changing its value the voltage drop
+                    across
+                    the led changes and the net current changes </li>
+
+                <br>
+                <li>We conclude that we control the intensity of the led by using Potentiometer. </li><br>
+
+
+            </ul>
+            <h2>If we replaced the Potentiometer with fixed resistance we need to calculate its value.</h2>
+            <h3>Side note : the intensity will be constant.</h3>
+            <h4>Given data: </h4>
+            <ul>
+                <li>Vled=2V</li>
+                <li>Iled=20mA</li>
+            </ul>
+            <h3>Since connection is series.Therfore, the current is constant for the whole circuit =20mA </h3>
+
+            <ul>
+                <li>Using Ohm's Law .(R=V/I)</li>
+                <li>R=(9-2)V/20mA= 350 ohm.</li>
+            </ul>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+
+            <h1>circuit #2</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120355.png">
+
+            </ul>
+            <h2> Hardware connection:</h2>
+            <br>
+            <img src="images/unnamed (2).gif" alt="logo" width="70%">
+            <br>
+            <h2> How does this circuit work?</h2>
+            <ul>
+                <li>After Implementing this circuit we will figure out that it represent xor gate, cuz the led only turn
+                    on when the 2 switches opposite to each other. </li>
+
+                <br>
+
+
+
+            </ul>
+            <h2> If we need to make the opposite functionality and let the led on only when they are the same</h2>
+            <h3> We will change the connections of the 2 legs of the switches</h3>
+            <ul>
+                <li>left leg of the first -> left leg of the second </li><br>
+                <li>right leg of the first -> right leg of the second </li>
+            </ul>
+            <img src="images/Screenshot 2022-08-31 130620.png">
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+            <h1>circuit #3</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120420.png">
+
+            </ul>
+            <h2> How does this circuit work?</h2>
+            <br>
+            <img src="images/Screenshot 2022-08-31 131852.png">
+            <ul>
+                <li>As we see in the pic, the capacitor charges first then discharge it in few secondes depends on the
+                    capacitance. But when u connect the 3 components in the circuit together u will see the led flashes
+                    only for a sec then turns off that happens because the capacitor works as a short circuit when it's
+                    fully charged (no change & equal V) in Dc
+                    signals but u can make the led turn on for more few seconds by bringing a capacitor with bigger
+                    capacitance ex:100 microF. </li>
+
+                <br>
+                <br>
+                <br>
+            </ul>
+            <h2> If u bring 2 capacitors connect them series then connect them parallel as shown in the fig:</h2>
+            <img src="images/Screenshot 2022-08-31 133710.png">
+            <ul>
+                <li>We know that capacitance in series are treated like Resistance in parallel state and vice versa so
+                    the capacitance value decreases, so the led switches off faster</li><br>
+                <li>By connecting them parallel the capacitance value increases so the led switches on for longer secs
+                </li>
+            </ul>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+
+
+
+            <h1>circuit #4</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120522.png">
+
+            </ul>
+            <h2> Hardware connection:</h2>
+            <br>
+            <img src="images/unnamed (1).gif" alt="logo" width="70%">
+            <ul>
+                <h2> How does this circuit work?</h2>
+                <h3> "This circuit Works as lightning system in street". </h3><br>
+                <h3>In order to understand more how it works first we should know the functionality of each Compnent
+                </h3>
+                <ul>
+                    <li>Potentiometer-> used to change the trigger point for the LED </li><br>
+                    <li>LDR-> Variable resistance that get affected by light .</li><br>
+                    <li>Transistor-> Worls as a switch.</li><br>
+                    <li>R2-> controls the amount of current going through the LED.</li>
+                    <br>
+                </ul>
+
+            </ul>
+            <li> So, what happens that when we connect the supply to the circuit the Potentiometer works as voltage
+                divider to supply the LDR and the Transistor with the needed voltage (Led on) . As light falls on the
+                surface of the LDR, the LDR changes it's resistance. The more the light, the less the
+                resistance of the LDR, the less the resistance, the less the voltage drop across it. The less the light,
+                themore the resistance and thus the more the voltage drop across it.</li><br>
+
+            <ul>
+                <li>Light on -> Led off.</li><br>
+                <li>Light off-> Led on.</li><BR>
+            </ul>
+            <li>By switching both LDR & Potentiometer, the functionality becomes the opposite(Light Detector) .
+                the resistance is high,so the current decreases therfore the IB become smaller than its value so the
+                switch becomes off ,led off and vice versa
+                off</li>
+            <img src="images/Screenshot 2022-08-31 152544.png">
+
+            <ul>
+                <br>
+                <li>Light on -> Led on.</li><br>
+                <li>Light off-> Led off.</li>
+            </ul>>
+
+
+
+            <br>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+
+
+
+
+
+            <h1>circuit #5</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120509.png">
+
+            </ul>
+            <h2> How does this circuit work?</h2>
+            <br>
+            <ul>
+                <li>R2-> controls the value of IB and In order not to make short circuit on R1 (IC=0)</li><br>
+                <li>switch-> controls the transistor</li><br>
+                <li>R3-> controls the amount of current going through the LED.</li><br>
+                <li>R1->USE For Biasing</li>
+                <br>
+                <br>
+            </ul>
+            <h3>by pushing down the switch the VBE has value so transistor switches on and by leaving the switch off the
+                transistor becomes off</h3><br>
+
+            <ul>
+                <li>Pressing on switch->led on</li> <br>
+                <li>Not Pressing on switch->led off
+                </li>
+            </ul>
+            <br>
+            <h3> *Fun Fact*: you can replace R2 and put your fingers instead on the wire</h3>
+            <img src="images/Screenshot 2022-08-31 160630.png">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+
+
+
+
+            <h1>circuit #6</h1>
+            <ul>
+                <img src="images/Screenshot 2022-08-31 120541.png">
+
+            </ul>
+            <h2> Hardware connection:</h2>
+            <br>
+            <img src="images/unnamed (3).gif" alt="logo" width="70%">
+
+            <h2> Functionality of the components:</h2>
+            <ul>
+
+                <li> Capacitors->regulates and smoothes the signal output. Also, controls the output signal frequency
+                    due to its discharging time.</li>
+                <br>
+                <li> Transistors->make square signal by switching on and off</li>
+                <br>
+                <br>
+            </ul>
+            <h2> Works as an oscillator as we see</h2>
+            <img src="images/Screenshot 2022-08-31 165035.png">
+            <ul>
+                <li>Assume 9 volt supply and that transistor, TR1 has just switched “OFF” (cut-off) and its collector
+                    voltage is rising towards Vcc, meanwhile transistor TR2 has just turned “ON”. Plate “A” of capacitor
+                    C1 is also rising towards the +9 volts supply rail of Vcc as it is connected to the collector of TR1
+                    which is now cut-off. Since TR1 is in cut-off, it conducts no current so there is no volt drop
+                    across load resistor R1.</li><br>
+
+                <li> The other side of capacitor, C1, plate “B”, is connected to the base terminal of transistor TR2 and
+                    at 0.6v because transistor TR2 is conducting (saturation). Therefore, capacitor C1 has a potential
+                    difference of +8.4 volts across its plates, (9.0-0.6v) from point A to point B.</li><br>
+
+                <li> Since TR2 is fully-on, capacitor C2 starts to charge up through resistor R2 towards Vcc. When the
+                    voltage across capacitor C2 rises to more than 0.6v, it biases transistor TR1 into conduction and
+                    into saturation.</li><br>
+
+                <li> The instant that transistor, TR1 switches “ON”, plate “A” of the capacitor which was originally at
+                    Vcc potential, immediately falls to 0.6 volts. This rapid fall of voltage on plate “A” causes an
+                    equal and instantaneous fall in voltage on plate “B” therefore plate “B” of C1 is pulled down to
+                    -8.4v (a reverse charge) and this negative voltage swing is applied the base of TR2 turning it hard
+                    “OFF”. One unstable state.</li><br>
+
+                <li> Transistor TR2 is driven into cut-off so capacitor C1 now begins to charge in the opposite
+                    direction via resistor R3 which is also connected to the +6 volts supply rail, Vcc.
+                </li><br>
+
+            </ul>
+
+
+
+            <br>
+
+
+
+
+
+        </section><!-- #end content area -->
+
+
+        <!-- sidebar -->
+        <aside>
+            <h2>See also: </h2>
+            <nav id="secondary-navigation">
+                <ul>
+                    <li class="current"><a href="assignment_1.html">Assignment</a></li>
+                    <li><a href="assignment_1.html">Cake Receipe</a></li>
+                    <li><a href="assignment_2.html">Connect4</a></li>
+                    <!-- <li><a href="assignment_1.html">Assignment</a></li>
+                    <li><a href="assignment_1.html">Assignment</a></li>
+                    <li><a href="assignment_1.html">Assignment</a></li> -->
+
+                </ul>
+            </nav>
+        </aside><!-- #end sidebar -->
+
+
+
+    </div><!-- #end div #main .wrapper -->
+
+
+
+
+
+    <!-- footer area -->
+    <footer>
+        <div id="colophon" class="wrapper clearfix">
+            <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+
+    </footer><!-- #end footer area -->
+
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+    <script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+    <!-- fire ups - read this file!  -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
