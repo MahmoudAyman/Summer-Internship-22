@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <!-- CHANGE YOUR NAME -->
-  <title>Mahmoud Ayman || Final Project</title>
+  <title>Abdulrhman Nasser || Final Project</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
@@ -32,14 +32,13 @@
             <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
               <li class="current"><a href="index.html">Home</a></li>
               <li>
-                <a href="cad.html">Assignments</a>
+                <a href="assignment_1 receipe.html">Assignments</a>
                 <ul>
-                  <li ><a href="assignment_1.html">Assignment</a></li>
-                  <li><a href="assignment_1.html">Assignment</a></li>
-                  <li><a href="assignment_1.html">Assignment</a></li>
-                  <li><a href="assignment_1.html">Assignment</a></li>
-                  <li><a href="assignment_1.html">Assignment</a></li>
-                  <li><a href="assignment_1.html">Assignment</a></li>
+                  <li ><a href="assignment_1 receipe.html">Assignment 1</a></li>
+                  <li><a href="assignment_2 Soldering wire holder.html">Assignment 2</a></li>
+		  <li><a href="assignment_3.html">Assignment 3</a></li>
+                  <li><a href="Group Project.html">Group project</a></li>
+                  
                 </ul>
               </li>
               <li><a href="final.html">Final Project</a></li>
@@ -55,37 +54,32 @@
     </div>
     </section>
 
-<div id="main" class="wrapper clearfix" style="margin-left: 500px; margin-right: 0px;">    
+<div id="main" class="wrapper clearfix">    
     
     	<section id="content">
         <!-- ADD YOUR THE STEPS OF YOUR DOCUMENTATION BELOW -->
         <!-- TO ADD IMAGES YOU WILL FIND IMG TAGS BETWEEN PARAGRAPHS -->
         <!-- ADD THE NAME OF YOUR FILE -->
-                    <h1>Step 1:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <h1>Idea:</h1>
+                    <p>The project idea was a cnc drawing machine. Where the user would have a simple device inside a box with a button. This device has a camera integrated in the casing, when the user pushes the button the camera snaps an image and sends it to the cnc drawing machine after applying some image processing techniques. The cnc drawing machine (one like in the image) then asks permission from the user to start drawing (for saftey purposes), when the permission is give the machine starts drawing the image.</p>
                     
-                    <img src="">
+                    <img src="images/images.jpg" height="30%" width="30%">
                                    
-                    <h1>Step 2:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <h1>Image processing:</h1>
+                    <p>The purpose of this step was to capture the image and start processing it so that the final product is a gcode which is sent to the machine. What i wanted to do is have the processing done in the box with ESP but life doesn't always go as planned 😢. So far i could't find a way to do so. Therefore i started searching on how to image process on the PC, where the image wouldbe sent to the PC from the box to be processed and after that sent to the machine from the PC.</p>
 
-                    <img src="">
+                    <p>After some research inkscape was the application i decided to use for this task. After downloading the application i followed this <a href="https://www.youtube.com/watch?v=rIu8_G_ukJY&t=0s">tutorial</a> to install the library used in the inkscape to convert the image to gcode. After that i then followed this <a href="https://www.youtube.com/watch?v=bbe56S_O-uI">tutorial</a> to convert the image into gcode. After trying various values i decided to go with 0.295 and this may vary according to the image </p>
+		    <img src="images/_New document 1 - Inkscape 8_11_2022 3_23_23 PM.png">
 
-                    <h1>Step 3:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p>Well, everything went smooth so far. Which was kinda weird, but what i didn't know was that was the calm before the storm 😢. The app showed the following error. And because the library was old and had no support whatsoever, i could't solve the problem so that was a bummer.  </p>
+                    <img src="images/test.gcode - Inkscape 8_31_2022 12_35_50 PM.png">
 
-                    <img src="">
-                    
-                    <h1>Step 4:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+		    <p>After some other research i found some app that converts an image into a gcode. However, the app works by just uploading the image and then downloading the gcode which sounds a bit fishy as i can't see any feedback from the application before downloading the file, so i'm leaving this app as the last option. </p>
+                    <img src="images/Filestar 8_31_2022 12_45_57 PM.png">
+                    <img src="images/Filestar 8_31_2022 12_50_25 PM.png">
+		    <p>Until i find some solution to this issue i'm stuck here ☹️💔. </p>
 
-                    <img src="">
-                    
-                    <h1>Step 5:</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-
-                    <img src="">
-                    
+              
 
     </section><!-- #end content area -->
 

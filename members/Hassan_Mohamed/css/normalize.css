@@ -528,3 +528,22 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.assignmentImg{
+    width: 50%;
+    height: 60vh;
+    object-fit: cover;
+}
+.imagesContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.fileButton{
+    padding: 1rem;
+}
+.fileLink{
+    text-decoration: none;
+}
