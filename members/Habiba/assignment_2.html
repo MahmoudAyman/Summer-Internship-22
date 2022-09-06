@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- CHANGE YOUR NAME -->
+
+  <title>Habiba Gasser || Hexagon Puzzle</title>
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li>
+                <a >Assignments</a>
+                <ul>
+                      <li><a href="assignment_1.html">Fudg Brownie Recipe</a></li>
+                      <li><a href="assignment_2.html">Hexagon Puzzle</a></li>
+                      <li><a href="assignment_3.html">Windup Toy Car</a></li>
+                      <!--<li><a href="assignment_4.html">Assignment 4</a></li>
+                      <li><a href="assignment_5.html">Assignment 5</a></li>
+                      -->
+
+                </ul>
+              </li>
+              <li><a href="final.html">Final project</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Hexagon Puzzle</h1>
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+    
+	<section id="content">
+
+                <h1>Required Materials</h1>
+                <ul>
+                  <li>Wood sheet 3mm thick (255cm^2)</li>
+                  <li>CAD program (preferably SolidWorks)</li>
+                  <li>RDWorks software program</li>
+                </ul>
+
+                <h1>Design using SolidWorks</h1>
+                <p>Feel free to skip and download the finished parts <a href="images/Hexagon Puzzle.zip" download="Hexagon Puzzle">
+                    here </a>. </p>
+                  <ul>
+
+                  <li><h2>The Mold</h2></li>
+                  <p>
+                    <ol>
+                    <li>Open sketch > select top plane to sketch on.
+                      <p>Draw polygon and add dimention as seen below.</p>
+                      <img src="images/A2sketch1.png"> </li>
+                    <li>Select Featueures > Extrueded Boss/Base.
+                      <p>On the left change dimension to dessired depth (here 6mm) then press ok.</p>
+                      <img src="images/A2sketch2.png"> </li>
+                    <li> Open another sketch > select the face of the part to sketch on.
+                      <p>Draw polygon and add dimention as seen below.</p>
+                      <img src="images/A2sketch3.png"> </li>
+                    <li>Select Featueures > Extrueded Cut.
+                      <p>On the left change dimension to dessired depth of cut (here 3mm) then press ok.
+                        </p>
+                      <img src="images/A2sketch4.png"> </li>
+                    </ol>
+                  </p>
+
+                  <li><h2>The Pieces</h2></li>
+
+                  <p>
+                    To make the design of the pieces simpler and custamizable creat a <b>grid</b> first. You can download the grid <a href="images/A2grid.SLDPRT" download="A2grid">
+                    here </a>.
+                    
+                    <p> </p>
+                    <p>Now you can draw any pieces you want to using this grid</p>
+                    <ol>
+                      <li>Draw a piece on the grid (make sure it's a closed drawing)</li>
+                      <img src="images/A2piece1.png">
+                      <li>Select Featueures > Extrueded Boss/Base.
+                      <img src="images/A2piece2.png">
+                      <li>On the left change dimension to dessired depth (here 3mm) then press ok.</li>
+                      <img src="images/A2piece3.png">
+                    </ol>
+
+                  </p>
+
+                  </ul>
+                <h1>Setup of Lazer Parameters</h1>
+                <ol>
+                  <li>Save SLDPRT file as dxf/dwg</li>
+                  <li>Open Thunder Laser (RDWorks)</li>
+                  <li>Import the puzzle pieces and edit the "Cut" parameters to Min Power=70, Max Power=70 , Speed=25</li>
+                  <img src="images/A2laserpieces.png">
+                  <li>Click SaveToUFile button</li>
+                  <li>Copy the folder to the USB of the Laser cutting machine and insert it</li>
+                  <li>Open file in the display of the machine and copy it to memory</li>
+                  <li>Establish your origin and use "frame" button to make sure you have enough space</li>
+                  <li>Press Enter</li>
+                  <img src="images/A2laser.jpeg">
+                </ol>
+                  Optional step: 
+                  <ol> 
+                    <li>After step 3: Import the grid and over lap it with the puzzle pieces by alining them in the upper left corner </li>
+                    <li>Select onther color for the grid</li>
+                    <li>Right click on the cut option of this layer > change the process to "Scan" and edit parameters to Min Power=10, Max Power=10 , Speed=220</li>
+                    <img src="images/A2laserpieces+grid.png">
+                    <li>Click SaveToUFile button</li>
+                    <li>Continue with steps 4 - 8</li>
+                </ol>
+
+                <h1>End result</h1>
+                <img src="images/A2fin1.jpeg">
+                <img src="images/A2fin2.jpeg">
+                <video width="400" controls>
+                  <source src="images/A2video.mp4">
+                  </video>
+
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+                <h1>Mini-Competition Result</h1>
+                <p>
+                <table style="width:50%">
+                  <tr>
+                    <th>Comtestant</th>
+                    <th>   Time   </th>
+                  </tr>
+
+                  <tr>
+                    <td>🥇 Sarah</td>
+                    <td>35.00 sec</td>
+                  </tr>
+
+                  <tr>
+                    <td>🥈 Yahya</td>
+                    <td>36.65 sec</td>
+                  </tr>
+                   
+
+                  <tr>
+                    <td>🥉Mo2men</td>
+                    <td>51.11 sec</td>
+                  </tr>
+
+                </table>
+              
+                   </p>
+                 </body>
+
+                   <p><h2>🏅Participation Award🏅</h2></p>
+                    <ul>
+                      <li>Anas</li>
+                      <li>Yousry</li>
+                      <li>Hannah</li>
+                
+                    </ul>
+                    </table>
+
+                               
+
+                
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+ <img src="images/A2assem1.png" height="50%" width="70%">
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+                    <ul>
+                      <li><a href="assignment_1.html">Fudg Brownie Recipe</a></li>
+                      <li><a href="assignment_2.html">Hexagon Puzzle</a></li>
+                      <li><a href="assignment_3.html">Windup Toy Car</a></li>
+                      <!--<li><a href="assignment_4.html">Assignment 4</a></li>
+                      <li><a href="assignment_5.html">Assignment 5</a></li>
+                      -->
+
+                    </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>
