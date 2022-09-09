@@ -43,6 +43,7 @@
                   <li><a href="assignment_1.html">Assignment 1</a></li>
                   <li><a href="assignment_2.html">Assignment 2</a></li>
                   <li><a href="assignment_4.html">Assignment 3</a></li>
+                  <li><a href="assignment_5.html">Assignment 4</a></li>
                   <li><a href="Group Project.html">Group Project (drawer)</a></li>
 
                   <!-- <li><a href="assignment_1.html">Assignment</a></li>
@@ -89,71 +90,51 @@
                 </video>
 
 
-                <h1>Step 3:(designing the inner box)</h1>
-                <p>The projects parts on solid works, which consists of two main parts. The inner box is responsible for storing the markers and must be inclined to roll the markers to the outer box. <br>
-                for the inner box, it must fit the marker with only some milimmeters difference, approximetly 16 cm in width and 2 cm in hight. <br> The inner box hight have to be double the raduis of the marker's width (approximetly 2cm) </p>
-                <p><b>A) Base, </b> the base of the inner box must not match the whole hight of the project in order to let a place for the markers to fall from the inner to the outer box(About double the diameter of the marker).</p>
+                <h1>Step 3:(Designing the PCB board)</h1>
+                <p>For the PCB design, I switched to eagle software as it has better PCB design control and libraries. First I drew the schematic digram of the circuit in order to apply it in the PCB wit the same connection. Then began to design the PCB of the circuit with some specifications, as the 2 variable resistors should be at the sides and the buttons should be infront and so on. The routing and design took some time but in the end it fitted perfectly with the smallest PCB board size achieved.  </p>
+                <img src="images/Assignment 4/eagle schematic.jpg">
+                <img src="images/Assignment 4/eagle PCB.jpg">
 
-                <img src="images/Assignment 2/inner base.jpg">
-                <p><br> <br> <b>B) Side, </b> The side of the box should implement some features in it beside containing the marker, which are fixing a holder that prevents the markers from falling, and fix a stander that makes the marker stand when the inner box is release. So it is designed in a dimensions of the whole box depth, and the double of markers approximete hight. <br> It also should have a hole to be fixed with screws with the outer box in order to allow the inner box to rotate inside the outer box. </p>
+              
+                <h1>Step 4: (exporting the design) </h1>
+                <p>Now after we designed the PCB circuit, we convert it to files to be prepared for machine files conversion: <br></b> <br> <b>The following images will explain the process</p>
+                <img src="images/Assignment 4/traces export 2.jpg">
+                <img src="images/Assignment 4/traces export 1.jpg">
 
-                <img src="images/Assignment 2/inner side.jpg">
+                <p><br> After applying all these steps, the exported image should look like this: </p>
+                <img src="images/Assignment 4/traces.png"/>
+                <p><br> Then we open the images with Paint to edit it to be ready to be converted to machine code</p>
+                <img src="images/Assignment 4/Paint steps.png"/>
 
-                <p><b>C) front, </b> The front and back of the inner box just helps in fixing the box's sides, it also sets the limits to design the outer box upon it, it will take the approximete width of the markers and double of the approximete hight. </p>
-
-                <img src="images/Assignment 2/inner front.jpg">
+                <h1><br><br>Step 5:(Converting to machine files)</h1>
+                <p>For the images to be converted to machine files, these images color difference must be turned into a vectors that the cnc will follow. Fab modules is an open sources website that provides this functionality, to open fab mods <a href="https://mods.cba.mit.edu/">click here</a>. So there are some steps with it shown in the images below: </p>
                 
-                <h1>Step 4: Designing the outer box </h1>
-                <p><b>A) base of the box, </b> while deigning the base of the outer box; the increase of width of inner box due to the inclination angle must be put in consideration. I used Pythagorean theorem  in order to calculate it as represented in the handsketch and applied that increase in depth of the base.
-                </p>
-                <img src="images/Assignment 2/outerBase.jpg">
+              
+                <img src="images/Assignment 4/FTM 2.jpg">
+                <img src="images/Assignment 4/FTM 3.jpg">
+                <img src="images/Assignment 4/FTM 1.jpg">
 
-                <p><b>B) The front of the box, </b> the front of the box will have a dimenstions of the fron of the inner box, but with an increase of 15 mm on the width of it. Also, the hight will be 3mm greater as the depth of the wood is 3mm. 
-                </p>
-                <img src="images/Assignment 2/outerFront.jpg">
-
-                <p><b>C) The Side of outer box, </b> the side will be pretty simple and designed to fit in the base and front, but should have a hole adjuusted with the inner box for it to be attached to to incline.</p>
-                <img src="images/Assignment 2/outerSide.jpg">
-
-                <p><b>D) The marker holder of outer box, </b> is designed in order to fix the marker in specific place in the box, it also has an circular ending with approximetly the same diameter of the marker in order to make it stand when the inclined angle increases.</p>
-                  <img src="images/Assignment 2/OuterHolder.jpg">
+                <p><br><b>repeat the same exporting steps for dimensions and traces, here is a video for file to machine conversion for rest of the images:</b></p>
+                <video id="myVideo" width="100%"  controls>
+                  <source src="images/Assignment 4/2022-09-05 16-01-30.mp4" type="video/mp4">
                 
-
-                <h1>Step 5:(Assembly)</h1>
-                <p>I grouped all this parts in an assembly to make sure that all dimensions fit</p>
-
-                <img src="images/Assignment 2/assm.jpeg">
-
-                <h1>Step 6:(Preparing final files to cut)</h1>
-                <p>Now, after finally designing all the parts, they are saved as a dxf file and grouped in RDworks software that is the CAM software the translates the dxf to G code for the machines to execute it.</p>
-                <img src="images/Assignment 2/rdworks.jpg">
-
-                <h1>Step 7:(Cutting)</h1>
-                <p>After cutting the parts, I discovered that there was a part with wrong dimensions, so instead of cutting it again, I just used the manual option for the laser cutter in order to cut the part not wanted.</p>
+                  Your browser does not support HTML5 video.
+                </video>
+                <h1>Step 7:(milling)</h1>
+                <p>Now we can make the machine print the files, we first change the pont of the machine to the v-cut type and set the origins. Then we choose the file to but cut and start it. Here is a video when it works:</p>
                 <video width="320" height="540" controls>
-                  <source src="images/Assignment 2/cutting.mp4" type="video/mp4">
+                  <source src="images/Assignment 4/cncmilling.mp4" type="video/mp4">
                   <source src="movie.ogg" type="video/ogg">
                 Your browser does not support the video tag.
                 </video>
 
                 <h1>Step 8:(Testing)</h1>
-                <p>After cutting the parts, It's the time to finally connect them and test the project first patch
-                  <br> the first patch was fine, but didn't achieve 100% of the trageted functionality... the marker was designed to stand upon releasing the inclined box, but it turns out that the stander is too light to raise the marker.</p>
-                </p>
-                <video width="540" height="320" controls>
-                  <source src="images/Assignment 2/test1.mp4" type="video/mp4">
-                  <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-                </video>
-
-                <h1>Step 9:(editing parts)</h1>
-                <p>As told, the stander part that was responsible for raising the marker is not heavy enough to do so. As a solution I decided to make this part from metal, in order to match mass ratio required. I edited the part to have more with and thus more weight and exported it as stl file to be cut on the metal cutter
-                  <br> waiting to be cut this thur. 1st of Sep, and I will update the results soon!</p>
-                </p>
-                <img src="images/Assignment 2/editedStander.jpg"/>
+                <p>Afer cutting, the final result was as shown in the image, I will try to weld the parts and update the news so stay tuned!</p>
+                <img src="images/Assignment 4/pcb.jpeg"/>
+                
 
 
-                <h1>Thanks for reading ! </h1>
+                <h1>Thanks for reading and stay tuned ! </h1>
                 
 
 </section><!-- #end content area -->
@@ -167,6 +148,8 @@
                 <li ><a href="assignment_1.html">Assignment 1</a></li>
                 <li class="current"><a href="assignment_2.html">Assignment 2</a></li>
                 <li><a href="assignment_4.html">Assignment 3</a></li>
+                <li><a href="assignment_5.html">Assignment 4</a></li>
+
                 <li><a href="Group Project.html">Group Project (drawer)</a></li>
 
 
