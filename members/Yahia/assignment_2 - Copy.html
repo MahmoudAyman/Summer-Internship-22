@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/x-png" href="images/favicon.png">
+
+  <!-- CHANGE YOUR NAME -->
+  <title>Yahia Osama || Summer Internship</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li ><a href="index.html">Home</a></li>
+              <li class="current">
+                <a href="assignment_1.html">Assignments</a>
+                <ul>
+                  <li><a href="assignment_1.html">Assignment 1</a></li>
+                  <li><a href="assignment_2.html">Assignment 2</a></li>
+                  <li><a href="assignment_4.html">Assignment 3</a></li>
+                  <li><a href="Group Project.html">Group Project (drawer)</a></li>
+
+                  <!-- <li><a href="assignment_1.html">Assignment</a></li>
+                  <li><a href="assignment_1.html">Assignment</a></li> -->
+                </ul>
+              </li>
+              <li><a href="final.html">Final Project</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Assignment 4: Build a BLUES ORGAN!</h1>
+      <!-- <img src="images/Assignment 1/cover.jpg"/> -->
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+
+    
+	<section id="content">
+                <h1>Idea: </h1>
+                <p>Hearing music is kind of joy, we really enjoy lestning to it and exchange some with other. What if you can make your own music!. It might seem too complex to make an insturment that makes music, but with some simple electronics everything becomes easier. Now let's make our blue organ, pack your list and be ready! </p>
+                
+                <h1>Components: </h1>
+                
+                
+                <img src="images/Assignment 4/components.jpg" width="40%">
+                               
+                <h1 ><br><b><u>Steps</u></b></h1>
+                <h1>Step 1:(design the circuit)</h1>
+                <p>For the piano to be pitch controlable, we used timer 555. The circuit is mainly a resistor ladder circuit, that depends on the values of the resistors to produce different sound of notes. As when the push button is pressed, it connect the trigger pin to the discharge pin with a certain value of resistance in between to produce the sound desired </p>
+                <img src="images/Assignment 4/circuit.jpg">
+
+                <h1>Step 2:(Schematic and simulation)</h1>
+                <p>One of the challenges was the value of the resitances, as thier value must have an observable difference in order for the notes to be different. As a solution I used Protus software to make a simulation for the circuit and tried to vary the resistor values untill I foound some values that could finally make a song. I tried the jingle bells song on it and it kinda worked :)</p>
+                <video width="320" height="240" controls>
+                  <source src="images/Assignment 4/Simulation.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+
+                <h1>Step 3:(designing the inner box)</h1>
+                <p>The projects parts on solid works, which consists of two main parts. The inner box is responsible for storing the markers and must be inclined to roll the markers to the outer box. <br>
+                for the inner box, it must fit the marker with only some milimmeters difference, approximetly 16 cm in width and 2 cm in hight. <br> The inner box hight have to be double the raduis of the marker's width (approximetly 2cm) </p>
+                <p><b>A) Base, </b> the base of the inner box must not match the whole hight of the project in order to let a place for the markers to fall from the inner to the outer box(About double the diameter of the marker).</p>
+
+                <img src="images/Assignment 2/inner base.jpg">
+                <p><br> <br> <b>B) Side, </b> The side of the box should implement some features in it beside containing the marker, which are fixing a holder that prevents the markers from falling, and fix a stander that makes the marker stand when the inner box is release. So it is designed in a dimensions of the whole box depth, and the double of markers approximete hight. <br> It also should have a hole to be fixed with screws with the outer box in order to allow the inner box to rotate inside the outer box. </p>
+
+                <img src="images/Assignment 2/inner side.jpg">
+
+                <p><b>C) front, </b> The front and back of the inner box just helps in fixing the box's sides, it also sets the limits to design the outer box upon it, it will take the approximete width of the markers and double of the approximete hight. </p>
+
+                <img src="images/Assignment 2/inner front.jpg">
+                
+                <h1>Step 4: Designing the outer box </h1>
+                <p><b>A) base of the box, </b> while deigning the base of the outer box; the increase of width of inner box due to the inclination angle must be put in consideration. I used Pythagorean theorem  in order to calculate it as represented in the handsketch and applied that increase in depth of the base.
+                </p>
+                <img src="images/Assignment 2/outerBase.jpg">
+
+                <p><b>B) The front of the box, </b> the front of the box will have a dimenstions of the fron of the inner box, but with an increase of 15 mm on the width of it. Also, the hight will be 3mm greater as the depth of the wood is 3mm. 
+                </p>
+                <img src="images/Assignment 2/outerFront.jpg">
+
+                <p><b>C) The Side of outer box, </b> the side will be pretty simple and designed to fit in the base and front, but should have a hole adjuusted with the inner box for it to be attached to to incline.</p>
+                <img src="images/Assignment 2/outerSide.jpg">
+
+                <p><b>D) The marker holder of outer box, </b> is designed in order to fix the marker in specific place in the box, it also has an circular ending with approximetly the same diameter of the marker in order to make it stand when the inclined angle increases.</p>
+                  <img src="images/Assignment 2/OuterHolder.jpg">
+                
+
+                <h1>Step 5:(Assembly)</h1>
+                <p>I grouped all this parts in an assembly to make sure that all dimensions fit</p>
+
+                <img src="images/Assignment 2/assm.jpeg">
+
+                <h1>Step 6:(Preparing final files to cut)</h1>
+                <p>Now, after finally designing all the parts, they are saved as a dxf file and grouped in RDworks software that is the CAM software the translates the dxf to G code for the machines to execute it.</p>
+                <img src="images/Assignment 2/rdworks.jpg">
+
+                <h1>Step 7:(Cutting)</h1>
+                <p>After cutting the parts, I discovered that there was a part with wrong dimensions, so instead of cutting it again, I just used the manual option for the laser cutter in order to cut the part not wanted.</p>
+                <video width="320" height="540" controls>
+                  <source src="images/Assignment 2/cutting.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+
+                <h1>Step 8:(Testing)</h1>
+                <p>After cutting the parts, It's the time to finally connect them and test the project first patch
+                  <br> the first patch was fine, but didn't achieve 100% of the trageted functionality... the marker was designed to stand upon releasing the inclined box, but it turns out that the stander is too light to raise the marker.</p>
+                </p>
+                <video width="540" height="320" controls>
+                  <source src="images/Assignment 2/test1.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+
+                <h1>Step 9:(editing parts)</h1>
+                <p>As told, the stander part that was responsible for raising the marker is not heavy enough to do so. As a solution I decided to make this part from metal, in order to match mass ratio required. I edited the part to have more with and thus more weight and exported it as stl file to be cut on the metal cutter
+                  <br> waiting to be cut this thur. 1st of Sep, and I will update the results soon!</p>
+                </p>
+                <img src="images/Assignment 2/editedStander.jpg"/>
+
+
+                <h1>Thanks for reading ! </h1>
+                
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+              <ul>
+                <li ><a href="assignment_1.html">Assignment 1</a></li>
+                <li class="current"><a href="assignment_2.html">Assignment 2</a></li>
+                <li><a href="assignment_4.html">Assignment 3</a></li>
+                <li><a href="Group Project.html">Group Project (drawer)</a></li>
+
+
+                <!-- <li><a href="assignment_1.html">Assignment</a></li>
+                <li><a href="assignment_1.html">Assignment</a></li>
+                <li><a href="assignment_1.html">Assignment</a></li> -->
+
+            </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>
