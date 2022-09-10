@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/x-png" href="images/favicon.png">
+
+  <!-- CHANGE YOUR NAME -->
+  <title>Yahia Osama || Summer Internship</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+  <script>
+    var vid = document.getElementById("myVideo");
+    vid.playbackRate = 5.0;
+   
+   </script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li ><a href="index.html">Home</a></li>
+              <li class="current">
+                <a href="assignment_1.html">Assignments</a>
+                <ul>
+                  <li><a href="assignment_1.html">Assignment 1</a></li>
+                  <li><a href="assignment_2.html">Assignment 2</a></li>
+                  <li><a href="assignment_4.html">Assignment 3</a></li>
+                  <li><a href="assignment_5.html">Assignment 4</a></li>
+                  <li><a href="Group Project.html">Group Project (drawer)</a></li>
+
+                  <!-- <li><a href="assignment_1.html">Assignment</a></li>
+                  <li><a href="assignment_1.html">Assignment</a></li> -->
+                </ul>
+              </li>
+              <li><a href="final.html">Final Project</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Assignment 4: Build a BLUES ORGAN!</h1>
+      <!-- <img src="images/Assignment 1/cover.jpg"/> -->
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+
+    
+	<section id="content">
+                <h1>Idea: </h1>
+                <p>Hearing music is kind of joy, we really enjoy lestning to it and exchange some with other. What if you can make your own music!. It might seem too complex to make an insturment that makes music, but with some simple electronics everything becomes easier. Now let's make our blue organ, pack your list and be ready! </p>
+                
+                <h1>Components: </h1>
+                
+                
+                <img src="images/Assignment 4/components.jpg" width="40%">
+                               
+                <h1 ><br><b><u>Steps</u></b></h1>
+                <h1>Step 1:(design the circuit)</h1>
+                <p>For the piano to be pitch controlable, we used timer 555. The circuit is mainly a resistor ladder circuit, that depends on the values of the resistors to produce different sound of notes. As when the push button is pressed, it connect the trigger pin to the discharge pin with a certain value of resistance in between to produce the sound desired </p>
+                <img src="images/Assignment 4/circuit.jpg">
+
+                <h1>Step 2:(Schematic and simulation)</h1>
+                <p>One of the challenges was the value of the resitances, as thier value must have an observable difference in order for the notes to be different. As a solution I used Protus software to make a simulation for the circuit and tried to vary the resistor values untill I foound some values that could finally make a song. I tried the jingle bells song on it and it kinda worked :)</p>
+                <video id="myVideo" width="100%"  controls>
+                  <source src="images/Assignment 4/circuit simulation.mp4" type="video/mp4">
+                
+                  Your browser does not support HTML5 video.
+                </video>
+
+
+                <h1>Step 3:(Designing the PCB board)</h1>
+                <p>For the PCB design, I switched to eagle software as it has better PCB design control and libraries. First I drew the schematic digram of the circuit in order to apply it in the PCB wit the same connection. Then began to design the PCB of the circuit with some specifications, as the 2 variable resistors should be at the sides and the buttons should be infront and so on. The routing and design took some time but in the end it fitted perfectly with the smallest PCB board size achieved.  </p>
+                <img src="images/Assignment 4/eagle schematic.jpg">
+                <img src="images/Assignment 4/eagle PCB.jpg">
+
+              
+                <h1>Step 4: (exporting the design) </h1>
+                <p>Now after we designed the PCB circuit, we convert it to files to be prepared for machine files conversion: <br></b> <br> <b>The following images will explain the process</p>
+                <img src="images/Assignment 4/traces export 2.jpg">
+                <img src="images/Assignment 4/traces export 1.jpg">
+
+                <p><br> After applying all these steps, the exported image should look like this: </p>
+                <img src="images/Assignment 4/traces.png"/>
+                <p><br> Then we open the images with Paint to edit it to be ready to be converted to machine code</p>
+                <img src="images/Assignment 4/Paint steps.png"/>
+
+                <h1><br><br>Step 5:(Converting to machine files)</h1>
+                <p>For the images to be converted to machine files, these images color difference must be turned into a vectors that the cnc will follow. Fab modules is an open sources website that provides this functionality, to open fab mods <a href="https://mods.cba.mit.edu/">click here</a>. So there are some steps with it shown in the images below: </p>
+                
+              
+                <img src="images/Assignment 4/FTM 2.jpg">
+                <img src="images/Assignment 4/FTM 3.jpg">
+                <img src="images/Assignment 4/FTM 1.jpg">
+
+                <p><br><b>repeat the same exporting steps for dimensions and traces, here is a video for file to machine conversion for rest of the images:</b></p>
+                <video id="myVideo" width="100%"  controls>
+                  <source src="images/Assignment 4/2022-09-05 16-01-30.mp4" type="video/mp4">
+                
+                  Your browser does not support HTML5 video.
+                </video>
+                <h1>Step 7:(milling)</h1>
+                <p>Now we can make the machine print the files, we first change the pont of the machine to the v-cut type and set the origins. Then we choose the file to but cut and start it. Here is a video when it works:</p>
+                <video width="320" height="540" controls>
+                  <source src="images/Assignment 4/cncmilling.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+
+                <h1>Step 8:(Testing)</h1>
+                <p>Afer cutting, the final result was as shown in the image, I will try to weld the parts and update the news so stay tuned!</p>
+                <img src="images/Assignment 4/pcb.jpeg"/>
+                
+
+
+                <h1>Thanks for reading and stay tuned ! </h1>
+                
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+              <ul>
+                <li ><a href="assignment_1.html">Assignment 1</a></li>
+                <li class="current"><a href="assignment_2.html">Assignment 2</a></li>
+                <li><a href="assignment_4.html">Assignment 3</a></li>
+                <li><a href="assignment_5.html">Assignment 4</a></li>
+
+                <li><a href="Group Project.html">Group Project (drawer)</a></li>
+
+
+                <!-- <li><a href="assignment_1.html">Assignment</a></li>
+                <li><a href="assignment_1.html">Assignment</a></li>
+                <li><a href="assignment_1.html">Assignment</a></li> -->
+
+            </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>
