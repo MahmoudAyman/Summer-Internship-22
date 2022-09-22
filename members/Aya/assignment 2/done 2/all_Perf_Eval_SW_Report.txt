@@ -1,0 +1,13 @@
+Instance of the following were suppressed or opened from new location when this file was opened
+
+File	Reason	
+F:\SOLIDWORKS\Rover\Main Parts\Arm 1.SLDASM	Unable to locate the file
+F:\SOLIDWORKS\Rover\Main Parts\Arm 2.SLDASM	Unable to locate the file
+F:\SOLIDWORKS\Rover\Main Parts\Assem4.SLDASM	Unable to locate the file
+F:\SOLIDWORKS\Rover\Main Parts\Legs-1.SLDASM	Unable to locate the file
+F:\SOLIDWORKS\Rover\Main Parts\wheel all.SLDASM	Unable to locate the file
+F:\SOLIDWORKS\Rover\Part13.SLDPRT	Unable to locate the file
+F:\SOLIDWORKS\Rover\Part14.SLDPRT	Unable to locate the file
+F:\SOLIDWORKS\Rover\Part16.SLDPRT	Unable to locate the file
+F:\SOLIDWORKS\Rover\Part5.SLDPRT	Unable to locate the file
+
