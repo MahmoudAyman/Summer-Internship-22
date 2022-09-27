@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- CHANGE YOUR NAME -->
+  <title>Fatma Albaz </title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li>
+                <a href="assignment_1.html">Assignments</a>
+                <ul>
+                        <li><a href="assignment_1.html">Food Recipe</a></li>
+                        <li><a href="assignment_2.html">Cloudy Coffe corner</a></li>
+                        <li><a href="assignment_3.html">1st group project</a></li>
+                        <li><a href="Electronic_labs.html">Electronics lab1</a></li>
+                        <li><a href="3dmodeling_assignment.html">3dprinted part</a></li>
+                        <li><a href="mcupcb.html">Microcontroller pcb</a></li>
+                        <li ><a href="memory_game.html">Memory game</a></li>
+                </ul>
+              </li>
+              <li><a href="final.html">Final Project</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Atmega Miccrocontroller♥️. </h1>
+      <img src="images/mcupcbonline.PNG" width="40%" length = "40%">
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+    
+	<section id="content">
+    <!-- ADD YOUR THE STEPS OF YOUR DOCUMENTATION BELOW -->
+    <!-- TO ADD IMAGES YOU WILL FIND IMG TAGS BETWEEN PARAGRAPHS -->
+    <!-- ADD THE NAME OF YOUR FILE -->
+				                
+                <h1>Brain storming</h1>
+                <p>A microcontroller is a compact, reasonably priced microprocessor that is made to carry out the particular functions of embedded systems, such as displaying microwave information and receiving distant signals, among others.<br>The CPU, memory (RAM, ROM, EPROM), Serial ports, peripherals (timers, counters, etc.), and other components make up a generic microcontroller.</p>                
+                
+                
+                <h1>Component </h1>
+                <p>1. Arduino UNO used for applying the code. <br>2.ATmega328p microcontroller. <br>3. Linear regulator 7805 to regulate power dissipation.<br>4. DC power connector socket. <br>5. slide switch.<br>6. Push button. <br>7. 5mm leds (one red led and another green led).<br>8. 16MHz crystal oscillator.<br>9. Ceramic disc capacitor 22 pF. <br>10. Ceramic disc capacitor 0.1 µF.<br>11.  capacitor 10 µF.<br>12. 330 Ohm resistor. <br>13. 10K Ohm resistor. <br>14. 2.54 mm female pin header.</p>
+                
+                
+                <h1>Component selection in eagle</h1>
+                <p>After selecting the components I used eagle to create the circuit schematic by gragging the components required. I tried to use all of them as through hole components.</p>
+                <img src="images/addeagle.PNG" width="70%" length = "40%"> 
+                <p>The ATmega328P chip, the brain of the board, is the first major component. a voltage regulator that controls the input voltage to produce a 5V pure output that is mostly utilized by the ATmega320p processor. a 16MHz crystal oscillator, which generates an electrical signal at a certain frequency. Simply said, it does the timekeeping so you don't have to. You may check the board's health and functionality using certain LEDs. The board may be connected to a DC power supply using the DC Plug. You may connect the board to your computer using the USB port. Pin headers are used to connect it to the outside world (sensors, motors, LEDs) through jumper wires.</p>
+
+                <h1>Creating Schematic</h1>
+                <p>After collecting all of them as shown in the next picture. I started to connect the components together.</p>
+                <img src="images/mcupcbarranged1.PNG" width="70%" length = "40%">
+                <p>Connected schematic is shown in the next pictrure</p>
+                <img src="images/mcupcbconnected1.PNG" width="70%" length = "40%">
+
+
+                <h1>layout creation</h1>
+                <p>Eagle software is also capable of creating the pcb layout by generating a file with (.brd) extention. the icon responsible for that conversion is the following highlighted icon.</p>
+                <img src="images/mcuhighlighted.PNG" width="70%" length = "40%">
+
+                <h1>DRC settings</h1>
+                <p>There are 3 sections in the drc to change before creating any trace in the pcb</p>
+                <img src="images/drc1.PNG" width="30%" length = "40%">
+                <img src="images/drc2.PNG" width="30%" length = "40%">
+                <img src="images/drc3.PNG" width="30%" length = "40%">
+
+
+                <h1>dragging components</h1>
+                <p>the components are arranged in a way that there wouldn't be any crossed traces.</p>
+                <img src="images/mcuunfinidhed.PNG" width="70%" length = "40%">
+                <h1>Auto routing</h1>
+                <p>Auto routing is an available option in eagle that generates routes to the pcb. these routes must be seperated from each other. Sometimes the autorouting is successful but on our case it was a fail.</p>
+
+                <p><a href="https://drive.google.com/file/d/1tEIOimpJ2J_10OgQpoHetlgQDcAEDpFd/view?usp=sharing"><img src="images/arroe.png"height="30%" width="30%"> </a> </p>
+
+
+                <p>At first it seemed perfect like any happy beginning, but as predicted there were some traces that were not connected correctly so I tried to connect them manually.</p>
+                <p><a href="https://drive.google.com/file/d/1BRiOrvLEF2mKZq8waEZ9U2kCOkLzsKuM/view?usp=sharing"><img src="images/arroe.png"height="30%" width="30%"> </a> </p>
+
+
+                
+
+                <h1>circuit improvements</h1>                
+                <p>It was impossible to generate the traces without linking to each other by the components dragged because we are creating a one layer pcb with too many components. So the only option in front of me was to delete some of the unnecessary components.<br> The remaining components are shown in the following schematic</p>
+                <img src="images/mcupcbarranged2.PNG" width="70%" length = "40%">
+
+                <h1>new schematic</h1>  
+                <p>The remaining components were connected again to perform the same previous fuctions but with less available pins for vcc and gnd for example.</p>              
+                <img src="images/mcupcbconnected2.PNG" width="70%" length = "40%">
+                
+                
+                <h1>new routing</h1>  
+                <p>This time autorouting option was not used, all routes were connected manually to avoid the issue of isolating some parts of the pcb from each other. This isolation is responsible for the linked traces. the final pcb is shown below finalllyyyy!!!!!!! </p>              
+                <img src="images/mcupcbfinished.PNG" width="70%" length = "40%">
+
+
+                <p>That's it I hope this was useful for you ^^♥️<br>Files: <br>1.  https://drive.google.com/file/d/1H5bvV5bYJJm8tAlz1pYbbN1totYz9ECT/view?usp=sharing<br>2.  https://drive.google.com/file/d/1H5bvV5bYJJm8tAlz1pYbbN1totYz9ECT/view?usp=sharing</p>
+
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+                    <ul>
+                      <li ><a href="assignment_1.html">Food Recipe</a></li>
+                      <li><a href="assignment_2.html">Cloudy Coffe corner</a></li>
+                      <li ><a href="assignment_3.html">1st group project</a></li>
+                      <li ><a href="Electronic_labs.html">Electronics lab1</a></li>
+                      <li ><a href="3dmodeling_assignment.html">3dprinted part</a></li>
+                      <li class="current"><a href="mcupcb.html">Microcontroller pcb</a></li>
+                      <li ><a href="memory_game.html">Memory game</a></li>
+                        <!--li><a href="assignment_1.html">Assignment</a></li>
+                        <li><a href="assignment_1.html">Assignment</a></li>-->
+
+                    </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>
