@@ -87,135 +87,113 @@ mark {
                   <li>Execute</li>
                 </h3></ul>
 
+<h1><b>Software Setup</b></h1>
+                <p><a href="https://componentsearchengine.com/library/eagle?gclid=Cj0KCQjwj7CZBhDHARIsAPPWv3cAddZqywn6dE4gkslN8py6YbIMGGdlpvoDZ8f_YYTZazTsBYvMno4aAj2HEALw_wcB">Eagle</a> is pretty straightforward to install. Though in the setup, you might encounter a crash error. After installation, the software sometimes does not work properly. Try out the steps below:</p>
+                <li>Navigate to "C:\EAGLE 9.x" and find the file "LIBEAY32.dll".</li>
+                <li>Rename the .dll by appending .bak at the end of the file name: "LIBEAY32.dll.bak".</li>
+                <li>Launch Eagle again, the program should open with no issue. </li>
+                
+                <img src="images/pcb2.jpg" height = "50%" width="60%">
+           
+
+<h1><b><i>Sketching and Defining</i></b></h1>
+
+<p>As usual and before bringing anything to life, we do paper sketches –then CAD – then  CAM. </p>
+
+<p>Below is a sketch for the circuit and connections...</p>
 
 
-<h1><b><i>toBeContinued</i></b></h1>
-<!--
-<p>A 555 <a href="https://www.ti.com/lit/ds/symlink/ne555.pdf">timer</a> in Astable state -p.11 in the datasheet- takes 5 volts and outputs a square wave. Tick tock one zero, and it theoretically loops forever. Here is the schematic of the circuit:</p>
-<img src="images/bahgat10.jpg">
-<p>The details of how the circuit works is irrelevant now. All we need to know is that output pin 3 in the above circuit will give us a clock signal, and that is enough. 
-</p>
+                <img src="images/pcb11.jpg" height = "50%" width="60%">
 
-<h1><b>Counter Setup</b></h1>
+<p>To electronically represent this sketch, we need to insert Eagle components and do the wiring through the software. Here is a quick <a href=https://www.youtube.com/watch?v=eY5_Oxsqb_g>tutorial</a> on how to add and wire different parts of your sketched circuit. </p>
 
-<p>To create the illusion of motion, we need to turn power on and off repeatedly. Doing so with buttons would practically corrupts the whole trick behind stop motion. That is why we need a <a href="https://www.electroschematics.com/wp-content/uploads/2013/07/7493-datasheet.pdf">counter</a> ic.   
-</p>
-<img src="images/bahgat11.jpg">
-<p>All it does is take a square wave and give a binary 1-15 count. The details of how the circuit works is irrelevant now. All we need to know is that CKA will take a square wave and give 15 binary numbers in order from QA-QD, and that is enough. </p>
-<p>Ps: all circuit connections and Tinkercad schematics/projects are attached in the Refer to section. </p>
-
-
-
-<h1><b>Drafting Motion</b></h1>
-
-<p><h2><mark>Clear Definition</mark></h2>What exactly do we want the motion to look like? Below is my initial brainstorming sketch, it helps defining different positions later. 
-</p>
-<img src="images/bahgat1.jpeg" width="500" height="1000">
-
-<p><h2><mark>Dismantling</mark></h2> After drawing different positions individually, we need to break them down to smaller parts for easier manipulation. For example, in this sketch the head “position 1” is repeated in all positions. Now we are not going to create a head for each piece of motion, but we will give the same head a true signal every time. Another example is the smile “position 11”. This one is active only in motions 2 and 5, so it will get a true signal ONLY in motions 2 and 5. And life goes on…
-</p>
-<P>Putting different pieces of motion over each other allows eliminating the overlapping parts. You can visualize and draw or just use <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiekcrQzp36AhVUnFwKHRHDBUIQFnoECCgQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTracing_paper&usg=AOvVaw35v9phMR9kii1HSZKI6Atb">tracing paper</a> to draw them individually then put all the layers together and trace the whole figure. 
-
-
-
-
-
-
-
-
-<p><h2><mark>Assembly</mark></h2> Now we can reassemble the small positions to view Bahgat in one piece again. Just check your initial pieces of motion and turn on all the corresponding positions; see below for more illustration
-</p>
-<img src="images/bahgat3.jpeg" width="500" height="1000">
-
-<p>Now we have a definite roadmap. Turn X on, Turn Y on, Turn z off or whatever. This expression is exactly how humans communicate with tech. The script is ready but yet to be translated. 
-</p>
-
-                <h1><b>Man to Machine</b></h1>
-<p>In the table below, the left side represents the counter output truth table. It is fixed. The right side is our truth table: which positions do we need true and when.</p>
-<p>
-Ps: positions 1&2 “the head and body” are always True, so I connected them directly to the power source to minimize complexity “the circuit is already messed up”. 
-</p>
-<img src="images/bahgat12.jpg">
-<p>After creating the truth table, make sure positions that only appear together and no where else are connected together. It makes life way easier and reduces the number of outputs, like positions 4&6 below or 5&7. They could have been merged together. 
-</p>
-<img src="images/bahgat13.jpg" width="1500"height="1000">
-
-<h1> <b>Logic Circuit</b></h1>
-<p>To obtain these very specific Boolean combinations, a bunch of logic gates allow current to flow from the clock to only the desired positions. What gates to use and where? You are very welcome to try and draw your own <a href="https://www.youtube.com/watch?v=FPrcIhqNPVo">K map</a>. But life is too short to do it manually; I used <a href="https://circuitverse.org/">CircuitVerse</a>. All you need to do is insert the truth table “the blue big thing we created in the previous step” and watch the software do its magic.</p>
-
-<p>Ps: find a detailed tutorial on how to use CircuitVerse in the references section below. </p>
-<p>You should end up with a table like this</p>
-<img src="images/bahgat14.jpg" width="1500"height="1000">
-<h3>Generate the circuit and do not freak out…
-</h3>
-<img src="images/bahgat15.jpg" width="1500"height="1000">
-<p>The circuit looks awful, but a small trick to reduce the agony is to copy-paste a screenshot of it into any photo editor and put marks on the wires you are done connecting. See below for illustration
-</p>
-<img src="images/bahgat16.jpg" width="1000" height="500">
-
-
-<h1><b>Implementing the Circuit</b></h1>
-<h2>There are 3 types of logic gates used here: </h2>
-
-
-  <li>Inverter: takes one input and outputs the opposite</li>
-  <li>AND: usually takes two inputs and returns true ONLY if they are both true </li>
-  <li>OR: usually takes two inputs and returns true if either one is true</li>
- 
-         <img src="images/bahgat17.jpg" width="400" height="300">
-<p>But in the circuit generated above, there are AND & OR gates with three and four inputs!!
-</p>
-<p></p>
-<p>Simply enough, build a new gate with three/two other gates. take the first two inputs into the first gate, take the output and the third input with a second gate, then take the last input with the second gate output into the third gate. See below to visualize better…
-</p>
-        <img src="images/bahgat18.jpg" width="400" height="300">
-        <p>Same goes with the OR gates</p>
-         <img src="images/bahgat19.jpg" width="400" height="300">  
-         <p>These integrated circuits are all available in Tinkercad, they make life easier so make sure to pick the right ic according to the number of inputs you have. Below are all the schematics you will need for this specific circuit
-</p>
-
-         <img src="images/bahgat20.jpg" width="600" height="500"> 
-<h1><b>Tinkercad </b></h1>
-         <img src="images/bahgat21.jpg" width="600" height="500"> 
-         <p>It is not the most straight forward circuit, but a few hacks may make things a bit less eye-straining
-</p>
-<p><h2><mark>Color codes</mark></h2> Use a single color for the wires of each clock, and adjust ground and vcc to black and red. In small circuits it does not make a huge difference, but here if you get lost you will suffer. 
-</p>
-
-<p><h2><mark>Pull away</mark></h2> Tinkercad knows when you connect two terminals. If you pull a component away, the connection will be intact. That is important in a component like the inverter; too many connections and your cursor might not catch the terminal because of the wires. Pulling it away will help you select without accidently holding a wrong wire and crying later. 
-</p>
-
-<p><h2><mark>Label</mark></h2>  Give outputs and components readable names to keep track of this mess. Especially that each ic will host many gates from the schematic. 
-</p>
-<p></p>
-<p></p>
-<p></p>
-
-
-<h1 style="text-align:center;color:red"><i>DO NOT DO THIS</i></h1>
-<h1><b>Tips and Errors</b></h1>
-
-<p><h2><mark>Two separate circuits do not operate without common ground</mark></h2> Because ground is relative, for two circuits exchanging signals to be in sync they must have a common ground. Since Tinkercad is just a sim, the circuit did not breathe at all. In reality, it should work but behave unexpectedly. 
-</p>
-
-<p><h2><mark>Connecting different LEDs</mark></h2> To visually represent our figure, many LEDs need to be connected together. Connect them in parallel to minimize voltage drop, especially that ics output low voltages. 
-</p>
-
-<p><h2><mark>Simulator errors</mark></h2> Your own wellbeing is more important than anything. Sometimes, the simulation will not work as expected and there will not be a problem with the circuit, don’t consume much of your brain power if you are fairly sure the connection is fine. Go fry potatoes and chill. 
+<p>Here are the specific components used for this project.
 </p>
 
 
+                <img src="images/pcb12.jpg" height = "50%" width="60%">
 
-<h1><b>References</b></h1>
-<p>[1]  <a href ="https://circuitverse.org/users/144581/projects/tick-tick-runn"> CircuitVerse project </a></p>
-<p>[2]<a href = "https://youtu.be/kl9GC_VxAcU"> CircuitVerse guide</a></p> 
-<p>[3]<a href="https://socratic.org/questions/and-gate-is-formed-by-using-two-1-or-2-nand-3-not-4-nor"> Logic gates</a></p>
-<p>[4]<a href="https://www.tinkercad.com/things/8e53phsi19T-counter-/editel?sharecode=r52ptao1zUEduPISNgHhh5c315gfHF6OE70eG67Azm0"> Tinkercad sim</a></p>
-
-<p>[5]<a href="https://www.deviantart.com/cyndergirl211/art/Run-stickman-run-GIF-465529756"> Stickman</a></p>
+                <p>You should end up with something like this</p>
+                <img src="images/pcb13.jpg" height = "50%" width="60%">
+<p>Use the <a href= https://www.youtube.com/watch?v=KkbF46M_jOM>labels</a> feature to clean the design and create better, more readable documentation.</p>
 
 
--->
+<h1><b>Layout Design and Routing</b></h1>
+
+
+<p>Now switch your view for a little bit of a puzzle 
+</p>
+
+                <img src="images/pcb14.jpg" height = "50%" width="60%">
+
+<p>Air-wire all the components in a most logical order for a small, neat, functional pcb. Here is a quick <a href= https://www.youtube.com/watch?v=IichPPq3Vfw > guide </a>on how to do so.</p>
+
+
+               <img src="images/pcb15.jpg" height = "50%" width="60%">
+
+<p>Reduce the outer frame size to fit the pcb without extra useless space. </p>
+
+
+               <img src="images/pcb16.jpg" height = "50%" width="60%">
+
+
+
+<h1><b>Pre-export Checklist</b></h1>
+
+     <li><b>Radsnest:</b> checks for optimal connection</li>
+    <li><b>DRC:</b> make sure to update it with the settings of your machine. </li>
+    <li><b>Common ground plane:</b> without a common ground, the circuit will not be in sync and will not work properly.  </li>
+    <li><b>Signal integrity:</b> try to connect airwires in 45 degree angles or just straight lines to minimize power disruption. </li>
+    <li><b>Check urc for errors:</b> not necessarily wrong, maybe doublecheck and save hours of blind debugging. </li>
+    <h1>Next Up</h1>
+<p>To export the CAD files, open view/layers then hide everything and display pads and bottom layers alone; in settings/misc/display drills. Export png. Show dimensions alone. Export png. Show drills alone. Export png.  </p>
+
+              <img src="images/pcb17.jpg" height = "40%" width="40%">
+
+              <p>Flip these images horizontally to eliminate the mirror effect resulting from drawing on the bottom layer instead of the top. 
+Only with the drills image we will need to fill in the black space in the image.
+</p>
+              <img src="images/pcb18.jpg" height = "50%" width="60%">
+
+
+              <p> CAM system used, FabModules, defines the path of the machine based on the color flip from black to white or vise versa. The drills image has two different borders for each drill; this way the output will be separated islands of copper from the entire circuit. 
+A proposed solution for this is to use jumpers but they will look awful and are impractical. 
+Simply fill the big black color with white color and voila, problem solved. </p>
+
+
+<h1><b>FabModules: CAM</b></h1>
+<p>Open the <a href=https://mods.cba.mit.edu/>link </a>, right click, open server programs, pcb png, a bunch of function should appear </p>
+              <img src="images/pcb20.jpg" height = "80%" width="80%">
+
+
+<p> Ps: they are built to interact with as functions. You literally pull the output from one box and drag it into the input of another. 
+
+Import the first image, set the cut depth and offset. High offsets might result in a broken pcb, specialy if the machine is not super duper good. 2 is an average offset. 
+Click calculate and check the design 
+</p>
+
+            <img src="images/pcb21.jpg" height = "80%" width="80%">
+
+            <p>The previous design for example is self-intersecting everywhere. It is like a sea of electrons floating everywhere. These redlines represent the machine’s movement in the air. 
+</p>
+
+            <img src="images/pcb22.jpg" height = "90%" width="90%">
+            <p>This is a way cleaner design will less offsets. If the number of offsets is important and unchangeable, we might use a smaller endmill; but this is dependent upon the accuracy of the machine. 
+</p>
+<p>About the frame, I set a 1 offset yet the view was like…
+</p>
+            <img src="images/pcb24.jpg" height = "60%" width="60%">
+<p>The problem was with the black/white thing. Make sure to import a frame in the eagle design board to maintain the dimensions of the exported image. When I did not import a frame, the software stretched the image to fill the screen, creating that extra boundary. 
+</p>
+           <img src="images/pcb25.jpg" height = "60%" width="60%">
+           <p>Now right click anywhere, modules, open server programs, save.
+</p>
+           <img src="images/pcb26.jpg" height = "60%" width="60%">
+           <p>Press save and that is it!
+
+Find a machine to print these files. Calibrate the bed and goodluck debugging whatever pops up.
+:)
+</p>
 
 </section><!-- #end content area -->
       
@@ -230,10 +208,9 @@ Ps: positions 1&2 “the head and body” are always True, so I connected them d
         					<li><a href="AssignmentThree.html">Hold it round</a></li>
         					
                     </ul>
-             </nav>
-      </aside><!-- #end sidebar -->
-    
-    
+
+           </nav>
+      </aside>
     
 </div><!-- #end div #main .wrapper -->
 
