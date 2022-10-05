@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- CHANGE YOUR NAME -->
+
+  <title>Electronics: Traffic Light</title>
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li>
+                <a >Assignments</a>
+                <ul>
+                      <li><a href="assignment_1.html">Fudg Brownie </a></li>
+                      <li><a href="assignment_2.html">2D: Hexagon Puzzle</a></li>
+                      <li><a href="assignment_3.html">3D: Windup Toy Car</a></li>
+                      <li><a href="assignment_4.html">El: Traffic Light</a></li>
+                  <!--<li><a href="assignment_5.html">PCB Microcontroller</a></li>
+                  -->
+                </ul>
+              </li>
+              <li><a href="final.html">Dynamic Shading System</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Electronics Project: Traffic Light</h1>
+      Very simple electronic project to try!🚦 
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+    
+	<section id="content">
+
+                <h1>Components Required</h1>
+                <ul>
+                  <li>Breadboard</li>
+                  <li>Jumpers</li>
+                  <li>2 x 555 Timer ICs</li>
+                  <li>LEDs: 1 Green, 1 Yellow, 1 Red</li>
+                  <li>Resistors: 100kΩ, 51kΩ, 2 x 330Ω, 180Ω</li>
+                  <li>Capacitors: 2 x 100uF</li>
+                </ul>
+
+                <h1>Circuit Diagram</h1>                
+                <img src="images/A4circuit.png">
+
+                <h1>555 Timer ICU</h1>
+                <P>This ICU can be used as a timer, ocillator or flip-flop. It operated from 4.5 to 16 Volts and can directly drive LEDs and relays.</P>
+                <p>In this project it is used as a timer to coordinate the durration of LED on and off phases.</p>
+
+                <h1>How it Works</h1>
+    <p>After we supply this circuit with power the green LED will turn on, because the voltage at pin 6 is less than the supply voltage. The red LED can not power on yet but the second ICU is powered so the green LED turns on.
+
+    <p>The capacitor slowly charges and as soon as it charges to 2/3 of the supply voltage, the supply voltage of the second IC turns off and the yellow LED turns on (the ICU is discharging). It keeps glowing until the supply of the capacitor reaches 2/3 of the supply voltage</p>
+
+    <p>Simultaneously, the capacitor of the first IC reacges grater than 2/3 of the supply voltage, so the output of the first ICU turns off. This results in the yellow LED turning off and the red LED turning on.</p>
+
+    <p>The red LED is connected only when the output of the first ICU is 0V because it is connected to the positive voltage. The Yellow LED turns on during the charging mode of the second ICU. The green LED turns on when the output of the second IC is a positive voltageAfter we supply this circuit with power the green LED will turn on, because the voltage at pin 6 is < the supply voltage. The red LED can not power on yet but second ICU is powered so he green LED turns on.</p>
+              
+
+                <h1>Assembly</h1>
+                <ol>
+                	<li>Use two jumpers to connect positive power rails with the other side and the negative power rails to each other, so that both sides of the breadbord will be supplied woth voltage upon inserting.</li>
+                	<li>Place the <font color="pink">first 555 IC </font> on the DIP support with the notch facing the left side.</li>
+                	<li>Connect <font color="pink">pin 8 </font> to positive rail and <font color="pink">pin 1 </font> to negative rail. Below is a sketch illustrating the the pin numbers.
+                		<img src="http://www.learningaboutelectronics.com/images/555-timer-pinout.png" height="50%" width="70%"></li>
+
+
+
+                	<li>Connect <font color="#E75480">pins 2 & 6</font> together.</li>
+                	<li>Connect <font color="#E75480">pins 4 & 8</font> together.</li>
+                	<li>Place 100kΩ  Resistor between <font color="#E75480">pins 6 & 3</font>.</li>
+                	<li>Place one capacitor between <font color="#E75480">pin 2</font> and negative rail (positive side to <font color="#E75480">pin 2</font> and negative to negative rail.</li>
+                	<li>Place the <font color="blue">second 555 IC </font> futher way from the fist one on the DIP support with the notch facing the left side.</li>
+                	<li>Connect <font color="#E75480">pin 3</font> of the first IC to <font color="blue">pin 8</font> of the second (now the second ICs' power supply comes from the fist IC)</li>
+                	<li>Connect <font color="blue">pin 1</font> to negative rail.</li>
+                	<li>Connect <font color="blue">pins 2 & 6</font> together.</li>
+                	<li>Connect <font color="blue">pins 4</font> to positive rail.</li>
+                	<li>Place 330kΩ  Resistor between <font color="blue">pins 6 & 3</font>.</li>
+                	<li>Place the other capacitor between pin 2 and negative rail (positive side to pin 2 and negative to negative rail.</li>
+                	<li> Insert the red and the yellow LEDs, so that the anode sides are on the same terminal strips but the cathode sides are in two different strips.</li>
+                	<li>Connect their anod sides to the positive rail</li>
+                	<li>Connect <font color="#E75480">pin 3</font> of the <font color="#E75480">first IC</font> to the cathode side of the red LED using a 330Ω resistor</li>
+                	<li>Connect the cathode side of the yellow LED to <font color="blue">pin 7</font> of the <font color="blue">second IC</font> using a 330Ω resistor</li>
+                	<li>Place a green LED on the bread board, connect its anode side to <font color="blue">pin 3</font> of the <font color="blue">second IC</font>
+                    and its cathode side to negative rail using a 180Ω resistor</li>
+				  
+                </ol>
+				    <p>Note that you can change the time by chaning the value of the resistance and/or the capasitors. </p>
+
+
+                <h1>The Project in Action</h1>
+                <video width="600" controls>
+                  <source src="images/A4video.mp4">
+                  </video>
+
+                <h1>Errors occured</h1>
+                <p>Fist problem occured was that the circuit would not even turn on and that was do to me putting the ICs with the notches in the opposite direction which I was supposed to.</p>
+                <p>After fixing this second problem was that the red LED would not turn on. At first I tried to use another LED assuming this one may be defect. But after tring the thered one I noticed that one of the jumbers was not connected all the way in and that was the problem.</p>
+
+   
+                
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+ <img src="images/A4bboard_active.jpg" height="50%" width="70%">
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+                    <ul>
+                      <li><a href="assignment_1.html">Fudg Brownie </a></li>
+                      <li><a href="assignment_2.html">2D: Hexagon Puzzle</a></li>
+                      <li><a href="assignment_3.html">3D: Windup Toy Car</a></li>
+                      <li><a href="assignment_4.html">Electronics: Traffic Light</a></li>
+                  <!--<li><a href="assignment_5.html">PCB Microcontroller</a></li>
+                  -->
+
+                    </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- CHANGE YOUR NAME -->
+  <title>Fatma Albaz </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="js/flexslider/flexslider.css">
+  <link rel="stylesheet" href="css/colorblocks-style.css">
+  <script src="js/libs/modernizr-2.6.2.min.js"></script>
+</head>
+
+
+<body id="home">
+    <header class="wrapper clearfix">
+		       
+        <div id="banner">        
+        	<div id="logo"><a href=""><img src="images/logo.png" alt="logo" height="30%" width="30%"></a></div> 
+        </div>
+
+        <nav id="topnav" role="navigation">
+          <div class="menu-toggle">Menu</div>  
+            <ul class="srt-menu" id="menu-main-navigation" style="padding-bottom: 10px;">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li>
+                <a href="assignment_1.html">Assignments</a>
+                <ul>
+                        <li><a href="assignment_1.html">Food Recipe</a></li>
+                        <li><a href="assignment_2.html">Cloudy Coffe corner</a></li>
+                        <li><a href="assignment_3.html">1st group project</a></li>
+                        <li><a href="Electronic_labs.html">Electronics lab1</a></li>
+                        <li><a href="3dmodeling_assignment.html">3dprinted part</a></li>
+                        <li><a href="mcupcb.html">Microcontroller pcb</a></li>
+                        <li ><a href="memory_game.html">Memory game</a></li>
+                        
+                </ul>
+              </li>
+              <li><a href="final.html">Final Project</a></li>
+            </ul>     
+        </nav>
+  
+    </header><!-- end header -->
+ 
+    <section id="page-header" class="clearfix">    
+   
+    <div class="wrapper">
+      <h1>Memory game♥️. </h1>
+      <img src="images/memorygame2.PNG" width="30%" length = "40%">
+    </div>
+    </section>
+
+<div id="main" class="wrapper clearfix">    
+    
+	<section id="content">
+    <!-- ADD YOUR THE STEPS OF YOUR DOCUMENTATION BELOW -->
+    <!-- TO ADD IMAGES YOU WILL FIND IMG TAGS BETWEEN PARAGRAPHS -->
+    <!-- ADD THE NAME OF YOUR FILE -->
+				                
+                <h1>Brain storming</h1>
+                <p>The card game known as the memory game or concentration, as it is often known is a favorite of both kids and adults everywhere. One of the traits necessary to succeed in it is a good memory. However, this is insufficient. <br>The memory game may be considered as a game of strategy if it is believed that the participants have flawless memory. Under this supposition, the game is studied, and the best course of action is discovered. It is uncomplicated and even surprising.</p>
+                <img src="images/memoryyyyyy.jfif" width="70%" length = "40%">
+
+                <h2 style= "color:rgba(108, 7, 96, 0.679);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </h2>
+
+                <h1>Component </h1>
+                <p>1. Arduino : https://amzn.to/2qU18sO<br>
+
+                  
+                  
+                  2. 9v battery:           https://amzn.to/2zIcBmL<br>
+                  
+                  3. Switch:               https://amzn.to/2upTngE<br>
+                  
+                  4. Jumper wires:         https://amzn.to/2zKePBX<br>
+                  
+                  5. Cardboard:            https://amzn.to/2JtgVFZ<br>
+                  
+
+                  
+                  6. Male DC Barrel Jack Adapter for Arduino : https://amzn.to/2DLx6jI<br>
+                  
+                  7. 4 Push Button:        https://amzn.to/2qRwssp<br>
+                  
+                  8. 100 Ohm Resistor:     https://amzn.to/2Q8zxCs<br>
+                  
+                  9. 4 different colored LEDs: https://amzn.to/2Kb6EQA<br>
+                  
+                  10. 9v Battery Connector: https://amzn.to/2r3TeNP</p>
+                  <h2 style= "color:rgba(108, 7, 96, 0.679);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
+
+                
+                <h1>Tinkercad</h1>
+                <p>The software used in this task is a free web application for 3D design, electronics, and coding is called Tinkercad. It's the best way to learn about Autodesk, a world authority in design and manufacturing technologies.</p>
+
+                <h1>Step 1:</h1>
+                <p>searching for the selected components must be the first step to be able to construct the circuit.<br> The components selected are shown in the following picture.</p>
+                <img src="images/memorygame1.PNG" width="70%" length = "40%">
+
+                <h1>Step 2:</h1>
+                <p>Now It's the time for connecting the components. the schematic for the circle is shown in the following picture.</p>
+                <img src="images/memorygameschematic.PNG" width="70%" length = "40%">
+                <p>The real circuit is shown in the following picture</p>
+                <img src="images/memorygame2.PNG" width="70%" length = "40%">
+                <h2 style= "color:rgba(8, 121, 158, 0.889);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </h2>
+
+
+                <h1>Coding</h1>
+                <p>we need to use 8 pins from the arduino. 4 pins used as an input and the other four as outputs. the input pins will be connected to the switches meanwhile the output pins will be connected to the leds.</p>
+                <p>Code written:<br>
+                  pinMode(2, OUTPUT);<br>
+                  pinMode(3, OUTPUT);<br>
+                  pinMode(4, OUTPUT);<br>
+                  pinMode(5, OUTPUT);<br>
+                  pinMode(8,  INPUT);<br>
+                  pinMode(9,  INPUT);<br>
+                  pinMode(10, INPUT);<br>
+                  pinMode(11, INPUT);<br>
+                </p>
+                <h2 style= "color:rgba(8, 121, 158, 0.889);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
+                <p><br>After that we will start initializing our variables. The memory game will only have ten levels so I created an array of size 10 to carry the values of random pattern created. I also created a flag to indicate the end of the game when the player enters a wrong move he loses.</p>
+                <p>Code written:<br>
+                  int x;<br>
+                  int arr[10]={0};<br>
+                  int output1,output,output3,output4, flag=0;<br>
+                 </p>
+                 <h2 style= "color:rgba(8, 121, 158, 0.889);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </h2>
+
+                 <p>The rest of the code basicaly handles the phase of checkening if the entered value is right or wrong and calculates the score for the player.</p>
+                 <p>whole code file: https://drive.google.com/file/d/1A0lr-CDMULaaE_SNDA7W3Ti_lRM3V6I4/view?usp=sharing<br>
+                 <h2 style= "color:rgba(8, 121, 158, 0.889);"> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </h2>
+
+                
+
+
+
+                 <h1><h2 style= "color:rgba(5, 141, 34, 0.889);"> GAME ON!!!!! </h2></h1>
+                 <p>This is a part of the game played the pattern was as following: (orange, green, blue, white, white...etc)</p>
+                 <p><a href="https://drive.google.com/file/d/1sa2tZI3Me8adlNSAbi8kMe6UEKO2NeXZ/view?usp=sharing"><img src="images/arroe.png"height="30%" width="30%"> </a> </p>
+
+                 <!--video width="70%" height="240" controls>
+                 <source src="images/WhatsApp Video 2022-09-21 at 23.33.05.mp4" type="video/mp4">
+                 </video-->
+                
+
+
+
+                <p>That's it I hope this was useful for you ^^♥️</p>
+
+
+</section><!-- #end content area -->
+      
+      
+    <!-- sidebar -->    
+    <aside>
+        <h2>See also: </h2>
+            <nav id="secondary-navigation">
+                    <ul>
+                      <li ><a href="assignment_1.html">Food Recipe</a></li>
+                      <li><a href="assignment_2.html">Cloudy Coffe corner</a></li>
+                      <li ><a href="assignment_3.html">1st group project</a></li>
+                      <li ><a href="Electronic_labs.html">Electronics lab1</a></li>
+                      <li ><a href="3dmodeling_assignment.html">3dprinted part</a></li>
+                      <li><a href="mcupcb.html">Microcontroller pcb</a></li>
+                      <li class="current"><a href="memory_game.html">Memory game</a></li>
+                        <!--li><a href="assignment_1.html">Assignment</a></li>
+                        <li><a href="assignment_1.html">Assignment</a></li>-->
+
+                    </ul>
+             </nav>
+      </aside><!-- #end sidebar -->
+    
+    
+    
+</div><!-- #end div #main .wrapper -->
+
+
+
+
+
+<!-- footer area -->    
+<footer>
+        <div id="colophon" class="wrapper clearfix">
+          <h2 style="padding-left: 30px;">PROUDLY MADE BY MAKERS</h2>
+            <img src="images/logo.png" height="30%" width="30%">
+        </div>
+        
+    </footer><!-- #end footer area --> 
+
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
+
+<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- fire ups - read this file!  -->   
+<script src="js/main.js"></script>
+
+</body>
+</html>
